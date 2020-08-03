@@ -17,7 +17,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 class ExotelCall {
-    //	public static String customerNumber = "9717038110";
+    //	public static String customerNumber = "your-customer-number";
     public String customerNumber;
     public static String url = "http://my.exotel.com/";
     public static String accountSid = "individual141";

@@ -19,7 +19,7 @@ import okhttp3.Response;
 
 class ExotelAgent {
     //	public static String customerNumber = "your-customer-number";
-    public String customerNumber= "09717038110";
+    public String customerNumber= "your-customer-number";
     public static String url = "http://my.exotel.com/";
     public static String exotelSid = "individual141";
     public static String apiid = "3def352e64b2081ffe5bdb3da98feff3423cdcc605301e0e";
