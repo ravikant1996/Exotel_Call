@@ -20,35 +20,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CallBtn= findViewById(R.id.callbtn);
-        Nextbtn= findViewById(R.id.nextbtn);
-        PhoneNo= findViewById(R.id.phone);
+        CallBtn = findViewById(R.id.callbtn);
+        Nextbtn = findViewById(R.id.nextbtn);
+        PhoneNo = findViewById(R.id.phone);
 
         CallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(PhoneNo.getText().toString().length()==0){
+                if (PhoneNo.getText().toString().length() == 0) {
                     Toast.makeText(MainActivity.this, "Please Enter Phone number", Toast.LENGTH_LONG).show();
-                }else{
+                } else {
                     CallingApi(PhoneNo.getText().toString().trim());
                 }
 
             }
         });
-       
+
 
     }
 
     private void CallingApi(String number) {
         Log.e("Test1", "pass");
-        number= "0"+number;
+        number = "0" + number;
 
        /* ExotelCall ext = new ExotelCall();
         ext.customerNumber=number;
         ext.connectCustomerToFlow();
         Log.e("Test2", "pass");*/
         ExotelAgent exotelAgent = new ExotelAgent();
-        exotelAgent.agentNumber=number;
+        exotelAgent.agentNumber = number;
         exotelAgent.connectToAgent();
         Log.e("Test2", "pass");
 
